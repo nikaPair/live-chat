@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './assets/icons/logo.svg';
-import {SApp, SHeader, SLink, SLogo} from "./assets/styles/app.styles";
-
+import './assets/styles/style.css';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import AppRouter from './components/AppRouter/AppRouter';
+import { Context } from '.';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import Loader from './components/Loader/Loader';
 function App() {
+    const { auth }: any = React.useContext(Context);
+    const [user, loading, error] = useAuthState(auth);
+
+    if (loading) {
+        return <Loader />;
+    }
+
     return (
-        <SApp>
-            <SHeader>
-                <SLogo src={logo} alt="logo"/>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <SLink
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </SLink>
-            </SHeader>
-        </SApp>
+        <BrowserRouter>
+            <Navbar />
+            <AppRouter />
+        </BrowserRouter>
     );
 }
 

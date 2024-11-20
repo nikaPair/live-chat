@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/nikaPair/live-chat/static/css/main.e9a5c61c.css",
-    "main.js": "/nikaPair/live-chat/static/js/main.7fac35ae.js",
-    "index.html": "/nikaPair/live-chat/index.html",
-    "main.e9a5c61c.css.map": "/nikaPair/live-chat/static/css/main.e9a5c61c.css.map",
-    "main.7fac35ae.js.map": "/nikaPair/live-chat/static/js/main.7fac35ae.js.map"
+    "main.css": "/github.io/live-chat/static/css/main.e9a5c61c.css",
+    "main.js": "/github.io/live-chat/static/js/main.db51de4c.js",
+    "index.html": "/github.io/live-chat/index.html",
+    "main.e9a5c61c.css.map": "/github.io/live-chat/static/css/main.e9a5c61c.css.map",
+    "main.db51de4c.js.map": "/github.io/live-chat/static/js/main.db51de4c.js.map"
   },
   "entrypoints": [
     "static/css/main.e9a5c61c.css",
-    "static/js/main.7fac35ae.js"
+    "static/js/main.db51de4c.js"
   ]
 }

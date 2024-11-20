@@ -37,7 +37,5 @@ export const NavButton = styled.button`
 
     &:hover {
         border: 2px solid #fff;
-        font-size: 20px;
-        padding: 7px 12px;
     }
 `;

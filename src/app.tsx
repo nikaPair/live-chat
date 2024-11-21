@@ -6,16 +6,17 @@ import AppRouter from './components/AppRouter/AppRouter';
 import { Context } from '.';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Loader from './components/Loader/Loader';
+import { ContextType } from './index';
 function App() {
-    const { auth }: any = React.useContext(Context);
-    const [user, loading, error] = useAuthState(auth);
+    const { auth }: ContextType = React.useContext(Context);
+    const [loading] = useAuthState(auth);
 
     if (loading) {
         return <Loader />;
     }
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='/live-chat'>
             <Navbar />
             <AppRouter />
         </BrowserRouter>

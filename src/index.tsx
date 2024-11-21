@@ -17,12 +17,15 @@ const app = initializeApp({
 
 const firestore = getFirestore(app);
 const auth = getAuth(app);
-
-export const Context: any = createContext(null);
+export type ContextType = {
+    auth: ReturnType<typeof getAuth>;
+    firestore: ReturnType<typeof getFirestore>;
+};
+export const Context = createContext({} as ContextType);
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-    <Context.Provider value={{ firestore: firestore, auth }}>
+    <Context.Provider value={{ firestore: firestore, auth } as ContextType}>
         <App />
     </Context.Provider>
 );
